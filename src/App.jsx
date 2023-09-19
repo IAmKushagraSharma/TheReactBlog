@@ -1,10 +1,11 @@
-function App() {
+import React from 'react'
+import {HomeIcon} from '@heroicons/react/24/solid'
+
+const App = () => {
   return (
-    <>
-      <div className="text-2xl font-bold m-4 text-green-700" >TheReactBlog</div>
-    </>
-  );
+    <HomeIcon className='h-10 w-10' />
+  )
 }
 
-export default App;
-  
+
+export default App
