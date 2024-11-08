@@ -1,11 +1,17 @@
-import React from 'react'
-import {HomeIcon} from '@heroicons/react/24/solid'
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/navabar/navbar";
+import Footer from "./components/footer";
 
-const App = () => {
+function App() {
   return (
-    <HomeIcon className='h-10 w-10' />
-  )
+    <div className="flex flex-col justify-between min-h-screen">
+      <div className="h-full">
+        <Navbar />
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
-
-export default App
+export default App;
