@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { TbFidgetSpinner } from "react-icons/tb";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import MarkdownRenderer from "../lib/markdown-provider";
 
 const AboutPage = () => {
   const [readme, setReadme] = useState(null);
@@ -51,7 +50,7 @@ const AboutPage = () => {
   return (
     <div className="p-4">
       <div className="prose">
-        <ReactMarkdown remarkPlugins={remarkGfm}>{readme}</ReactMarkdown>
+        <MarkdownRenderer content={readme} />
       </div>
     </div>
   );

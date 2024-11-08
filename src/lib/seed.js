@@ -5,8 +5,9 @@ const prisma = new PrismaClient();
 
 async function main() {
   try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const posts = await response.json();
+    const response = await fetch("https://dummyjson.com/posts?limit=200");
+    const data = await response.json();
+    const posts = data.posts;
 
     for (let post of posts) {
       await prisma.post.create({
